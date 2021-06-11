@@ -52,8 +52,7 @@ public class EmployeeDAO {
 	}
 
 	public Employee searchEmployee(int empId) throws IdNotFoundException {
-
-		String sql1 = "select * from employee where emp_id=?";
+			String sql1 = "select * from employee where emp_id=?";
 
 		List<Employee> l = jdbcTemplate.query(sql1, new EmployeeRowMapper(), empId);
 
